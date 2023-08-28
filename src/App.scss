@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  > * {
+    flex-grow: 1;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  width: 100%;
+  margin: auto;
+}

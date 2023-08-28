@@ -1,11 +1,15 @@
 import React from 'react';
+import AuthContextProvider from '@/lib/AuthContext';
 
-function App()
-{
+import Welcome from '@/components/pages/Welcome';
+
+import './App.scss';
+
+function App() {
   return (
-    <div className='App'>
-      <h1>Hello World!</h1>
-    </div>
+    <AuthContextProvider>
+      <Welcome />
+    </AuthContextProvider>
   );
 }
 
