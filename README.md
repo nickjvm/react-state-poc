@@ -1,4 +1,4 @@
-# React Boilerplate / POC
+# React Boilerplate & State Management POC
 
 ## Setup
 - Webpack v5.88
@@ -30,4 +30,4 @@ All auth methods and user state is maintained in `./src/lib/AuthContext.jsx` wit
 
 ## A note about mocked implementation
 
-I used (https://dummyjson.com)[https://dummyjson.com/docs/users] for a mock API to simulate user creation. After create, the returned user profile is saved in localStorage to simulate a logged in user. Of course, in a production environment, the API would handle server-side validation and we'd securely store the `access_token` and use that to fetch the user profile.
+I used [https://dummyjson.com](https://dummyjson.com/docs/users) for a mock API to simulate user creation. After create, the returned user profile is saved in localStorage to simulate a logged in user. Of course, in a production environment, the API would handle server-side validation and we'd securely store the `access_token` and use that to fetch the user profile.
