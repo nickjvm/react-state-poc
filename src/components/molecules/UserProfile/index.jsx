@@ -1,15 +1,18 @@
 import React from 'react';
-import { useAuth } from '@/lib/AuthContext';
+import PropTypes from 'prop-types';
 
-import Button from '@/components/atoms/Button';
+import './UserProfile.scss';
 
-export default function UserProfile() {
-  const { user, signOut } = useAuth();
-
+export default function UserProfile({ user }) {
   return (
-    <div className="container">
+    <div id="profile" className="container">
       <h1>Hello {user.username}!</h1>
-      <Button onClick={signOut}>Sign Out</Button>
     </div>
   );
 }
+
+UserProfile.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+  }),
+};

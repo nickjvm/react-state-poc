@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { useAuth } from '@/lib/AuthContext';
 import Button from '@/components/atoms/Button';
 
 import './SignUp.scss';
 
-export default function SignUp() {
+export default function SignUp({ createUser }) {
   const [formValues, setFormValues] = useState({
     username: '',
     password: '',
     confirmPassword: '',
   });
+
   const [formErrors, setFormErrors] = useState({});
-  const { loading, createUser } = useAuth();
 
   const handleChange = (e) => {
     const { name, value, required: isRequired } = e.target;
@@ -84,7 +84,7 @@ export default function SignUp() {
             {formErrors?.confirmPassword && <span className="error-message">{formErrors.confirmPassword}</span>}
           </div>
           <div className="actions">
-            <Button block size="lg" disabled={loading} type="submit">{loading ? 'Creating...' : 'Create Account'}</Button>
+            <Button block size="lg" type="submit">Create Account</Button>
             {formErrors?.general && <span className="error-message">{formErrors.general}</span>}
           </div>
         </form>
@@ -92,3 +92,7 @@ export default function SignUp() {
     </div>
   );
 }
+
+SignUp.propTypes = {
+  createUser: PropTypes.func.required,
+};

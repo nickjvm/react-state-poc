@@ -22,11 +22,8 @@ This boilerplate does not use `create-react-app` or any other boilerplate framew
 
 ## Signup Form State Management
 
-I chose to store all form values in a single state reference object (`formValues`). This allows the form to be extended for unknown future profile fields (First Name, Email address, etc) without having to define new state variables. On change error handling is added for immediate user feedback. Final client-side validation is handled in the `createUser` call (see below).
+I chose to store all form values in a single state reference object (`formValues`). This allows the form to be extended for unknown future profile fields (First Name, Email address, etc) without having to define new state variables. On change error handling is added for immediate user feedback.
 
-## User State Management
-
-All auth methods and user state is maintained in `./src/lib/AuthContext.jsx` with the help of `useContext`. This makes it easy for any component to get user details, call sign in / sign out, etc. The `createUser` call does some light client-side validation in the event the caller doesn't implement validation.
 
 ## A note about mocked implementation
 
