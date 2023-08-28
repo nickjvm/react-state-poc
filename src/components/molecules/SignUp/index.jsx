@@ -19,7 +19,7 @@ export default function SignUp() {
     const { name, value, required: isRequired } = e.target;
 
     const nextValues = {...formValues};
-    nextValues[name] = value.trim();
+    nextValues[name] = value;
 
     const nextErrors = {...formErrors };
     nextErrors.general = null;
@@ -32,8 +32,10 @@ export default function SignUp() {
       }
     }
 
-    if (name === 'confirmPassword' && value !== formValues.password) {
-      nextErrors[name] = 'Passwords do not match';
+    if (['password', 'confirmPassword'].includes(name) && value) {
+      const passwordMismatch = name === 'password' && formValues.confirmPassword && value !== formValues.confirmPassword
+        || name === 'confirmPassword' && formValues.password && value !== formValues.password;
+      nextErrors.confirmPassword = passwordMismatch ? 'Passwords do not match' : null;
     }
 
     setFormErrors(nextErrors);

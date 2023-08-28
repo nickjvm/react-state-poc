@@ -52,7 +52,7 @@ export default function AuthContextProvider({ children }) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        username: user.username,
+        username: user.username.trim(),
         // for this demo, we're not going to send a password over the wire to a mock API
         // password: user.password,
       }),
