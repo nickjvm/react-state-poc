@@ -18,21 +18,20 @@ module.exports = (env) => {
     },
     devServer: {
       liveReload: true,
-      // contentBase: "./build",
     },
     module: {
-      rules: [
+      rules : [
         {
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          use: ['babel-loader', 'eslint-loader'],
+          test    : /\.(js|jsx)$/,
+          exclude : /node_modules/,
+          use     : [ 'babel-loader', 'eslint-loader' ],
         },
         {
-          test: /\.less$/,
-          use: [
+          test : /\.scss$/,
+          use  : [
             'style-loader',
             'css-loader',
-            'less-loader',
+            'sass-loader',
           ],
         },
       ],

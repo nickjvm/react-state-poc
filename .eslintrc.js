@@ -32,6 +32,8 @@ module.exports = {
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
     'quotes': ['error', 'single'],
-    'indent': ['error', 2],
+    'indent': ['error', 2, { SwitchCase: 1 }],
+    'jsx-quotes': ['error', 'prefer-double'],
+    'brace-style': 'error',
   },
 };
