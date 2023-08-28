@@ -1,9 +1,10 @@
 # React Boilerplate / POC
 
 ## Setup
-- Webpack
-- Eslint
-- Babel
+- Webpack v5.88
+- Eslint v7.32
+- Babel v7.22
+- React v18.2
 
 This boilerplate does not use `create-react-app` or any other boilerplate framework, it's simply a poor man's boilerplate to quickly get a React environment set up and act as a quick starting off point.
 
