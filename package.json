@@ -1,7 +1,7 @@
 {
-  "name": "react-tst",
+  "name": "react-state-poc",
   "version": "1.0.0",
-  "description": "A React demo for TST",
+  "description": "A React state handling proof-of-concept",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --env=production",
