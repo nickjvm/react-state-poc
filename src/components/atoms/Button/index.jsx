@@ -13,7 +13,7 @@ export default function Button({ block, size = 'md', children, ...props }) {
 }
 
 Button.propTypes = {
-  block: PropTypes.boolean,
+  block: PropTypes.bool,
   children: PropTypes.node,
   size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
 };

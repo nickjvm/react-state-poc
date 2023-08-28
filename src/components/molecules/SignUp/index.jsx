@@ -33,6 +33,8 @@ export default function SignUp() {
     }
 
     if (['password', 'confirmPassword'].includes(name) && value) {
+      // only throw the mismatch error if both fields have a value. This is so we don't give the user
+      // a warning before they even got to the confirm password field.
       const passwordMismatch = name === 'password' && formValues.confirmPassword && value !== formValues.confirmPassword
         || name === 'confirmPassword' && formValues.password && value !== formValues.password;
       nextErrors.confirmPassword = passwordMismatch ? 'Passwords do not match' : null;
