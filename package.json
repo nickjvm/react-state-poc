@@ -1,14 +1,14 @@
 {
-  "name": "react-demo",
+  "name": "react-tst",
   "version": "1.0.0",
-  "description": "",
+  "description": "A React demo for TST",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --env=production",
-    "start": "webpack serve --mode development --env=development",
+    "dev": "webpack serve --mode development --env=development",
     "lint": "eslint --fix --ext .js,.jsx ."
   },
-  "author": "",
+  "author": "nickjvm",
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
@@ -29,6 +29,7 @@
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "less": "^4.2.0",
+    "mini-css-extract-plugin": "^2.7.6",
     "prop-types": "^15.8.1",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2",

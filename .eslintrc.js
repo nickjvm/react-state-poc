@@ -28,6 +28,11 @@ module.exports = {
   'plugins': [
     'react',
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   'rules': {
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
